@@ -78,8 +78,8 @@ tar -xzf vcftools-0.1.17.tar.gz  && \
  ./configure --prefix=${SOFT}/vcftools-0.1.17 && \
  make && \
  make install && \
- cd .. \
- rm -rf vcftools-0.1.17 && \
+ cd .. && \
+ rm -rd vcftools-0.1.17 && \
  rm -rf /tmp/* && \
  rm -rf /run/* && \
  rm -rf /var/log/*
