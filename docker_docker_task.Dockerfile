@@ -23,10 +23,7 @@ ARG NUM_CORES=4
 ENV SOFT=/soft
 RUN mkdir -p ${SOFT} && \
     cd ${SOFT} && \
-    mkdir samtools-1.21 htslib-1.21 libdeflate-1.24 bcftools-1.21 vcftools-0.1.17 && \
-    mkdir /soft/python_script && \
-    mkdir -p /ref/GRCh38.d1.vd1_mainChr/sepChrs/ 
-    #for the last task ^
+    mkdir samtools-1.21 htslib-1.21 libdeflate-1.24 bcftools-1.21 vcftools-0.1.17
 
 #samtools of version 1.21, sep 12, 2024
 RUN wget https://github.com/samtools/samtools/releases/download/1.21/samtools-1.21.tar.bz2 && \
@@ -95,12 +92,11 @@ ENV SAMTOOLS="" \
     HTSLIB="" \
     BCFTOOLS="" \
     VCFTOOLS="" \
-    LIBDEFLATE="" \
-    SAMTOOLS="${SOFT}/samtools-1.21/bin/samtools" \
+    LIBDEFLATE=""
+ENV SAMTOOLS="${SOFT}/samtools-1.21/bin/samtools" \
     HTSLIB="${SOFT}/htslib-1.21/bin/htslib" \
     BCFTOOLS="${SOFT}/bcftools-1.21/bin/bcftools" \
     VCFTOOLS="${SOFT}/vcftools-0.1.17/bin/vcftools" \
-    LIBDEFLATE="${SOFT}/libdeflate-1.24/bin/libdeflate" \
-    PATH="${SAMTOOLS}:${HTSLIB}:${LIBDEFLATE}:${BCFTOOLS}:${VCFTOOLS}:$PATH"
+    LIBDEFLATE="${SOFT}/libdeflate-1.24/bin/libdeflate"
 
 WORKDIR ${SOFT}

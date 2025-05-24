@@ -1,0 +1,6 @@
+Firstly, we're checking if formatting is fine.
+Formatting is fine.
+File is uploaded.
+We're starting to set reference nucleotides. 2025-05-24 13:42:41.961337
+We're setting alternative nucleotides. 2025-05-24 13:44:09.319253
+Saving output file. Bye!
